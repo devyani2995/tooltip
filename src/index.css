@@ -11,3 +11,101 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dashed black;
+  margin-left: 45%;
+  margin-top: 20%;
+}
+
+/* Common styling for the tooltip text */
+.tooltipContent{
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  position: absolute;
+  padding: 8px 10px;
+  z-index: 1; /* Ensures the tooltip appears on top of other elements */
+}
+
+/* Common style for the arrow of the tooltip text */
+.tooltipContent::after{
+  content: " ";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+
+/* Show the tooltip text when mouse over the tooltip container */
+.tooltip:hover {
+  .tooltipContent {
+    visibility: visible;
+  }
+}
+
+/* Set the style of Tooltip text when the props pass as left*/
+.tooltipContent-left {
+  width: 166px;
+  top: -16px;
+  right: 107%; 
+}
+
+/* Set the style for the arrow of the tooltip text when the props pass as left */
+.tooltipContent-left::after{
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent black;
+}
+
+/* Set the style of Tooltip text when the props pass as right*/
+.tooltipContent-right {
+  width: 166px;
+  top: -16px;
+  left: 107%;
+  
+}
+
+/* Set the style for the arrow of the tooltip text when the props pass as right */
+.tooltipContent-right::after{
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-color: transparent black transparent transparent;
+}
+
+/* Set the style of Tooltip text when the props pass as top*/
+.tooltipContent-top {
+  width: 166px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -83px; /* Use half of the width (166/2 = 60), to center the tooltip */
+}
+
+/* Set the style for the arrow of the tooltip text when the props pass as top */
+.tooltipContent-top::after{
+  top: 100%;
+  left: 50%;
+  border-color: black transparent transparent transparent;
+}
+
+
+/* Set the style of Tooltip text when the props pass as bottom*/
+.tooltipContent-bottom {
+  width: 166px;
+  top: 127%;
+  left: 50%;
+  margin-left: -83px; /* Use half of the width (166/2 = 60), to center the tooltip */
+}
+
+/* Set the style for the arrow of the tooltip text when the props pass as bottom */
+.tooltipContent-bottom::after{
+  bottom: 100%;
+  left: 50%;
+  border-color: transparent transparent black transparent;
+}
