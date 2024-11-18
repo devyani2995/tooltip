@@ -84,7 +84,7 @@ code {
   width: 166px;
   bottom: 100%;
   left: 50%;
-  margin-left: -83px; /* Use half of the width (166/2 = 60), to center the tooltip */
+  margin-left: -83px; /* Use half of the width (166/2 = 83), to center the tooltip */
 }
 
 /* Set the style for the arrow of the tooltip text when the props pass as top */
@@ -100,7 +100,7 @@ code {
   width: 166px;
   top: 127%;
   left: 50%;
-  margin-left: -83px; /* Use half of the width (166/2 = 60), to center the tooltip */
+  margin-left: -83px; /* Use half of the width (166/2 = 83), to center the tooltip */
 }
 
 /* Set the style for the arrow of the tooltip text when the props pass as bottom */
